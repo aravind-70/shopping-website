@@ -17,13 +17,6 @@
 /** @type {Array<{id:number, name:string, price:number, image:string, category:string}>} */
 const PRODUCTS = [
   {
-    id: 1,
-    name: 'Floral Print Anarkali Kurti',
-    price: 599,
-    image: 'https://images.unsplash.com/photo-1709858273282-6682a4bd1bc5?w=400&q=80',
-    category: 'Kurtis',
-  },
-  {
     id: 2,
     name: 'Banarasi Silk Saree',
     price: 1299,
@@ -43,13 +36,6 @@ const PRODUCTS = [
     price: 899,
     image: 'https://images.unsplash.com/photo-1682007911429-aca093c2b57c?w=400&q=80',
     category: 'Dresses',
-  },
-  {
-    id: 5,
-    name: 'Chiffon Palazzo Suit Set',
-    price: 1099,
-    image: 'https://images.unsplash.com/photo-1682079546597-73316d5d00e0?w=400&q=80',
-    category: 'Suits',
   },
   {
     id: 6,
