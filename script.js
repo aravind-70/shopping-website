@@ -17,42 +17,42 @@
 /** @type {Array<{id:number, name:string, price:number, image:string, category:string}>} */
 const PRODUCTS = [
   {
-    id: 2,
+    id: 1,
     name: 'Banarasi Silk Saree',
     price: 1299,
     image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&q=80',
     category: 'Sarees',
   },
   {
-    id: 3,
+    id: 2,
     name: 'Embroidered Lehenga Choli',
     price: 2499,
     image: 'https://images.unsplash.com/photo-1681980260966-6d199c1e2d8d?w=400&q=80',
     category: 'Lehengas',
   },
   {
-    id: 4,
+    id: 3,
     name: 'Cotton A-Line Maxi Dress',
     price: 899,
     image: 'https://images.unsplash.com/photo-1682007911429-aca093c2b57c?w=400&q=80',
     category: 'Dresses',
   },
   {
-    id: 6,
+    id: 4,
     name: 'Georgette Party Wear Gown',
     price: 1799,
     image: 'https://images.unsplash.com/photo-1598966739654-5e9a252d8a32?w=400&q=80',
     category: 'Gowns',
   },
   {
-    id: 7,
+    id: 5,
     name: 'Printed Rayon Wrap Dress',
     price: 699,
     image: 'https://images.unsplash.com/photo-1584036371568-b51f810b8b2e?w=400&q=80',
     category: 'Dresses',
   },
   {
-    id: 8,
+    id: 6,
     name: 'Designer Net Dupatta Set',
     price: 499,
     image: 'https://images.unsplash.com/photo-1711711888137-76d01d1881df?w=400&q=80',
