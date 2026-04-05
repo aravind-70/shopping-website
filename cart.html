@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy - Cart</title>
+  <!-- Link to our stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION BAR ========== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">🛍️ ShopEasy</a>
+    <a href="cart.html" class="cart-link">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </a>
+  </nav>
+
+  <!-- ========== CART SECTION ========== -->
+  <main class="cart-page">
+    <h1>Your Shopping Cart</h1>
+
+    <!-- Cart items will be rendered here by script.js -->
+    <div id="cart-items" class="cart-items"></div>
+
+    <!-- Cart summary (total price) -->
+    <div id="cart-summary" class="cart-summary">
+      <!-- Shown only when cart has items -->
+    </div>
+
+    <!-- Message when cart is empty -->
+    <div id="empty-cart-message" class="empty-cart-message">
+      <p>Your cart is empty.</p>
+      <a href="index.html" class="btn">Continue Shopping</a>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>&copy; 2026 ShopEasy. All rights reserved.</p>
+  </footer>
+
+  <!-- Link to our JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
