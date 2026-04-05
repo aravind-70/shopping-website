@@ -1,0 +1,45 @@
+# GitHub Pages deployment workflow
+# Automatically deploys the static site when code is pushed to the main branch.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+# Grant GITHUB_TOKEN the permissions required for Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only allow one deployment at a time
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site as artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository root (all static files)
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

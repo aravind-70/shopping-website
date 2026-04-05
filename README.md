@@ -15,15 +15,23 @@ No frameworks, no build tools – just open the files in a browser or deploy for
 | Responsive design | Works on desktop, tablet, and mobile |
 | Hover animations | Subtle card lift & image zoom effects |
 
+## 🔗 Live Demo
+
+The site is deployed via GitHub Pages and accessible at:  
+👉 **https://aravind-70.github.io/shopping-website/**
+
 ## 📁 File Structure
 
 ```
 shopping-website/
-├── index.html   ← Home page (product grid + search)
-├── cart.html    ← Cart page (items, quantities, totals)
-├── style.css    ← All styles (no frameworks)
-├── script.js    ← All JavaScript logic
-└── README.md    ← This file
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  ← Automated GitHub Pages deployment
+├── index.html          ← Home page (product grid + search)
+├── cart.html           ← Cart page (items, quantities, totals)
+├── style.css           ← All styles (no frameworks)
+├── script.js           ← All JavaScript logic
+└── README.md           ← This file
 ```
 
 ## 🚀 Running Locally
@@ -45,34 +53,34 @@ open index.html
 
 ## 🌐 Deploying to GitHub Pages (Free Hosting)
 
-Follow these steps to publish the site at  
+This repository includes a **GitHub Actions workflow** (`.github/workflows/deploy.yml`) that automatically deploys the site whenever code is pushed to `main`.
+
+### Automated Deployment (recommended)
+
+Once the code is on the `main` branch:
+
+1. Go to **Settings → Pages** in your GitHub repository
+2. Under **Source**, select **GitHub Actions**
+3. That's it! The workflow runs automatically on every push to `main`
+
+The deployment workflow:
+- Uses `actions/checkout@v4` to fetch the code
+- Uses `actions/upload-pages-artifact@v3` to package the static files
+- Uses `actions/deploy-pages@v4` to publish to GitHub Pages
+
+### Manual Deployment (alternative)
+
+If you prefer the simpler branch-based approach:
+
+1. Go to **Settings → Pages**
+2. Under **Source**, select **Deploy from a branch**
+3. Choose branch **`main`** and folder **`/ (root)`**
+4. Click **Save**
+
+### Access your live site
+
+Your site will be available at:  
 `https://<your-username>.github.io/shopping-website/`
-
-### Step 1 – Push your code to GitHub
-
-```bash
-# If you haven't already, initialise git and push
-git init
-git add .
-git commit -m "Initial commit – ShopEasy MVP"
-git branch -M main
-git remote add origin https://github.com/<your-username>/shopping-website.git
-git push -u origin main
-```
-
-### Step 2 – Enable GitHub Pages
-
-1. Open your repository on **github.com**
-2. Click **Settings** (top menu)
-3. In the left sidebar click **Pages**
-4. Under **Source** select **Deploy from a branch**
-5. Choose branch **`main`** and folder **`/ (root)`**
-6. Click **Save**
-
-### Step 3 – Access your live site
-
-GitHub will show a banner:  
-> *"Your site is published at https://\<your-username\>.github.io/shopping-website/"*
 
 It may take 1–2 minutes for the first deploy.  
 Every subsequent `git push` to `main` will automatically update the live site.
