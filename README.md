@@ -1,19 +1,20 @@
-# 🛍️ ShopEasy – MVP Shopping Website
+# 👗 Mahanila Shopping Zone – Women's Fashion Store
 
-A clean, beginner-friendly shopping website built with plain **HTML, CSS, and Vanilla JavaScript**.  
+A stylish, Meesho-inspired women's fashion shopping website built with plain **HTML, CSS, and Vanilla JavaScript**.  
 No frameworks, no build tools – just open the files in a browser or deploy for free with GitHub Pages.
 
 ## ✨ Features
 
 | Feature | Details |
 |---|---|
-| Product catalogue | 8 sample products with images, names, and prices |
+| Product catalogue | 8 trendy women's fashion items – kurtis, sarees, lehengas, dresses, gowns & more |
 | Shopping cart | Add / remove items, adjust quantities, live total |
 | Persistent cart | Cart stored in `localStorage` (survives page refresh) |
 | Dynamic badge | Cart item count updates in real time |
 | Search bar | Filter products by name or category instantly |
 | Responsive design | Works on desktop, tablet, and mobile |
 | Hover animations | Subtle card lift & image zoom effects |
+| Indian pricing | All prices in ₹ (Indian Rupees) |
 
 ## 🔗 Live Demo
 
@@ -96,13 +97,15 @@ Each product has:
 {
   id: 1,                    // unique number
   name: 'Product Name',
-  price: 29.99,             // number (USD)
+  price: 599,               // number (INR ₹)
   image: 'https://...',     // any image URL
-  category: 'Electronics',  // used by the search filter
+  category: 'Kurtis',       // used by the search filter
 }
 ```
 
 Add, remove, or edit entries there to customise the catalogue.
+
+Categories used: Kurtis, Sarees, Lehengas, Dresses, Suits, Gowns, Dupattas.
 
 ---
 
