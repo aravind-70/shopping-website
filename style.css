@@ -1,5 +1,5 @@
 /* ===========================================
-   style.css – ShopEasy MVP Shopping Website
+   style.css – Mahanila Shopping Zone
    =========================================== */
 
 /* ---------- CSS Reset & Base ---------- */
@@ -10,15 +10,15 @@
 }
 
 :root {
-  --primary:    #4f46e5;   /* indigo */
-  --primary-h:  #4338ca;
+  --primary:    #e91e63;   /* pink/magenta */
+  --primary-h:  #c2185b;
   --danger:     #ef4444;
   --danger-h:   #dc2626;
   --text:       #1f2937;
   --muted:      #6b7280;
-  --bg:         #f9fafb;
+  --bg:         #fdf2f8;
   --card-bg:    #ffffff;
-  --border:     #e5e7eb;
+  --border:     #f3e5f5;
   --radius:     12px;
   --shadow:     0 4px 16px rgba(0,0,0,.08);
   --transition: .2s ease;
@@ -110,7 +110,7 @@ img { display: block; max-width: 100%; }
 
 /* ---------- Hero / Search ---------- */
 .hero {
-  background: linear-gradient(135deg, var(--primary) 0%, #818cf8 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #f06292 100%);
   color: #fff;
   text-align: center;
   padding: 3.5rem 1rem 3rem;

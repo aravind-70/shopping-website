@@ -1,8 +1,8 @@
 /**
- * script.js – ShopEasy MVP Shopping Website
+ * script.js – Mahanila Shopping Zone
  *
  * Responsibilities:
- *  1. Define product catalogue
+ *  1. Define product catalogue (women's fashion & dresses)
  *  2. Render products on the home page
  *  3. Handle "Add to Cart" with localStorage persistence
  *  4. Update cart badge count dynamically
@@ -18,59 +18,59 @@
 const PRODUCTS = [
   {
     id: 1,
-    name: 'Wireless Noise-Cancelling Headphones',
-    price: 79.99,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80',
-    category: 'Electronics',
+    name: 'Floral Print Anarkali Kurti',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&q=80',
+    category: 'Kurtis',
   },
   {
     id: 2,
-    name: 'Minimalist Leather Watch',
-    price: 129.00,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80',
-    category: 'Accessories',
+    name: 'Banarasi Silk Saree',
+    price: 1299,
+    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&q=80',
+    category: 'Sarees',
   },
   {
     id: 3,
-    name: 'Running Sneakers',
-    price: 64.95,
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80',
-    category: 'Footwear',
+    name: 'Embroidered Lehenga Choli',
+    price: 2499,
+    image: 'https://images.unsplash.com/photo-1594463750939-ebb28c3f7f75?w=400&q=80',
+    category: 'Lehengas',
   },
   {
     id: 4,
-    name: 'Portable Bluetooth Speaker',
-    price: 49.99,
-    image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&q=80',
-    category: 'Electronics',
+    name: 'Cotton A-Line Maxi Dress',
+    price: 899,
+    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&q=80',
+    category: 'Dresses',
   },
   {
     id: 5,
-    name: 'Cotton Casual T-Shirt',
-    price: 19.99,
-    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80',
-    category: 'Clothing',
+    name: 'Chiffon Palazzo Suit Set',
+    price: 1099,
+    image: 'https://images.unsplash.com/photo-1614886137085-5a0c1058e647?w=400&q=80',
+    category: 'Suits',
   },
   {
     id: 6,
-    name: 'Ceramic Coffee Mug',
-    price: 14.50,
-    image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&q=80',
-    category: 'Kitchen',
+    name: 'Georgette Party Wear Gown',
+    price: 1799,
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&q=80',
+    category: 'Gowns',
   },
   {
     id: 7,
-    name: 'Stainless Steel Water Bottle',
-    price: 24.99,
-    image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&q=80',
-    category: 'Sports',
+    name: 'Printed Rayon Wrap Dress',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=400&q=80',
+    category: 'Dresses',
   },
   {
     id: 8,
-    name: 'Hardcover Notebook',
-    price: 11.95,
-    image: 'https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400&q=80',
-    category: 'Stationery',
+    name: 'Designer Net Dupatta Set',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400&q=80',
+    category: 'Dupattas',
   },
 ];
 
@@ -78,7 +78,7 @@ const PRODUCTS = [
    2. CART HELPERS  (localStorage)
    ============================================================ */
 
-const CART_KEY = 'shopeasy_cart';
+const CART_KEY = 'mahanila_cart';
 
 /**
  * Load cart array from localStorage.
@@ -217,7 +217,7 @@ function createProductCard(product) {
       <img src="${product.image}" alt="${product.name}" loading="lazy" />
       <div class="card-body">
         <h3>${product.name}</h3>
-        <p class="price">$${product.price.toFixed(2)}</p>
+        <p class="price">₹${product.price.toFixed(2)}</p>
         <button
           class="btn btn-primary"
           onclick="addToCart(${product.id})"
@@ -280,7 +280,7 @@ function renderCart() {
       <img src="${item.image}" alt="${item.name}" />
       <div class="cart-item-details">
         <h3>${item.name}</h3>
-        <p class="price">$${item.price.toFixed(2)} each</p>
+        <p class="price">₹${item.price.toFixed(2)} each</p>
         <div class="qty-controls" role="group" aria-label="Quantity for ${item.name}">
           <button class="qty-btn" onclick="changeQty(${item.id}, -1)" aria-label="Decrease quantity">−</button>
           <span class="qty-value" aria-live="polite">${item.qty}</span>
